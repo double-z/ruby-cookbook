@@ -18,7 +18,7 @@
 #
 
 # Global Ruby version to install
-ruby_version = '1.9.3-p194'
+ruby_version = '1.9.3-p327'
 # All available Ruby versions
 ruby_versions = [ruby_version]
 
