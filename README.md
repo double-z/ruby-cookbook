@@ -8,8 +8,7 @@ Requirements
 
 ## Platform:
 
-* Ubuntu
-* Debian
+Most current platforms are supported; see documentation of rbenv cookbook.
 
 ## Cookbooks:
 
