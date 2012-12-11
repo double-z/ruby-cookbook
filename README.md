@@ -1,7 +1,13 @@
 Description
 ===========
 
-Chef wrapper cookbook that installs Ruby using [rbenv](https://github.com/sstephenson/rbenv)
+This is a wrapper cookbook that installs Ruby using the cookbooks
+[rbenv](https://github.com/fnichol/chef-rbenv) and
+[ruby_build](https://github.com/fnichol/chef-ruby_build) by Fletcher Nichol.
+
+Besides providing meaningful node attributes, this wrapper also addresses
+[a serious problem](https://github.com/fnichol/chef-rbenv/issues/16) with the
+rbenv cookbook that might cause the first converge to fail.
 
 Requirements
 ============
@@ -12,26 +18,26 @@ Most current platforms are supported; see documentation of rbenv cookbook.
 
 ## Cookbooks:
 
-* [ruby_build](https://github.com/fnichol/chef-ruby_build)
-* [rbenv](https://github.com/fnichol/chef-rbenv)
+* rbenv
+* ruby_build
 
 Attributes
 ==========
 
-The recipe `ruby::default` overrides the following rbenv attributes:
+The cookbook overrides the following rbenv attributes:
 
 - `node['rbenv']['global']`
 - `node['rbenv']['rubies']`
 - `node['rbenv']['gems']`
 
-See the excellent documentaion of the rbenv cookbook for more information.
+See file `attributes/default.rb` for actual node attributes.
 
 Recipes
 =======
 
 ## ruby::default
 
-Installs Ruby using rbenv
+Installs Ruby 1.9.3 using rbenv and ruby-build
 
 License and Author
 ==================
