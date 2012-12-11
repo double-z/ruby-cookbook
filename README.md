@@ -1,7 +1,7 @@
 Description
 ===========
 
-Installs Ruby using rbenv
+Chef wrapper cookbook that installs Ruby using [rbenv](https://github.com/sstephenson/rbenv)
 
 Requirements
 ============
@@ -19,7 +19,13 @@ Requirements
 Attributes
 ==========
 
-*No attributes defined*
+The recipe `ruby::default` overrides the following rbenv attributes:
+
+- `node['rbenv']['global']`
+- `node['rbenv']['rubies']`
+- `node['rbenv']['gems']`
+
+See the excellent documentaion of the rbenv cookbook for more information.
 
 Recipes
 =======
