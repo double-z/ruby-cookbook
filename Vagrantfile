@@ -1,6 +1,5 @@
 # vi: set ft=ruby :
 
-require 'bundler/setup'
 require 'berkshelf/vagrant'
 
 Vagrant::Config.run do |config|
