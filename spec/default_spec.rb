@@ -2,7 +2,7 @@ require 'chefspec'
 
 describe 'The recipe ruby::default' do
   let (:chef_run) do
-    chef_run = ChefSpec::ChefRunner.new(:step_info => 'rbenv')
+    chef_run = ChefSpec::ChefRunner.new
     chef_run.node.automatic_attrs['platform'] = 'ubuntu'
     chef_run.converge 'ruby::default'
     chef_run
